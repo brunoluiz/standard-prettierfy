@@ -1,4 +1,4 @@
-# standardjs-prettierfy
+# standard-prettierfy
 
 This script makes the task of adding [`standard`](https://standardjs.com/) and [`prettier`](https://prettier.io/) easier. A simple `./prettify.sh $APP_PATH $APP_BRANCH` will do the job.
 
