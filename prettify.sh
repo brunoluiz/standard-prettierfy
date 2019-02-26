@@ -1,14 +1,18 @@
 #!/bin/sh
 
 APP_PATH=$1
+APP_BRANCH=master
 PRETTIER_CONF=$PWD/.prettierrc.json
 EDITOR_CONF=$PWD/.editorconfig
 
 [ -z "$APP_PATH" ] && echo 'No project informed!' && exit
 cd $APP_PATH
 
+# use user specified branch if required
+[ -z "$2" ] && APP_BRANCH=$APP_BRANCH || APP_BRANCH=$2
+
 # update repo
-git checkout dev
+git checkout $APP_BRANCH
 git pull
 
 # create prettier branch
